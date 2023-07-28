@@ -9,14 +9,14 @@ Are you a data engineer looking for a hassle-free way to set up a comprehensive 
 - Hadoop: [2.8.5](https://hadoop.apache.org/docs/r2.8.5/)  
 - Spark: [2.4.5](https://spark.apache.org/docs/2.4.5/)  
 - Hive: [2.3.6](https://hive.apache.org/)  
-- Sqoop [1.4.7](https://sqoop.apache.org/docs/1.4.7/SqoopUserGuide.html)  
+- Sqoop: [1.4.7](https://sqoop.apache.org/docs/1.4.7/SqoopUserGuide.html)  
   
 
 **NOTE: Docker containers are shortlived, data stored on them will be lost as soon you stop the container.** 
 
 # Quick Start:
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-2. Pull _detools_ docker image: `docker pull giri7627/detools:latest`  
+2. Pull **_detools_** docker image: `docker pull giri7627/detools:latest`  
 3. Start container: `docker run --rm -it -p 8080:8080 -p 9000:9000 -p 8088:8088 -p 8042:8042 -p 7077:7077 -p 8888:8888 --hostname localhost giri7627/detools:latest`  
 4. Open Jupyter Notebook using the link displayed on terminal
 5. Monitor Spark using [Yarn Application Master](http://localhost:8088)
