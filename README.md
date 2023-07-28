@@ -24,7 +24,9 @@ spark=SparkSession.builder.appName('Dockerised DE Cluster').getOrCreate()
 
 # Access Terminal Using Jupyter Notebook
 
-To Access Terminal using Jupyter notebook, open a terminal session by clicking on "New" button on Jupyter Home page, execute `bash` command after the terminal opens
+To Access Terminal using Jupyter notebook, open a terminal session by clicking on "New" button on Jupyter Home page.
+ 
+ **execute `bash` command after the terminal opens**
 
 ![Open Terminal](images/jp_terminal.png)
 
