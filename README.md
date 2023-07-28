@@ -3,14 +3,13 @@
 Are you a data engineer looking for a hassle-free way to set up a comprehensive Big Data cluster for your projects? Look no further! Welcome to our Git repository - a one-stop solution that provides a Dockerfile to effortlessly build a fully functional Hadoop, Spark, Hive, and Sqoop cluster.
 
 # Components Version:
-
-
-Hadoop: [2.8.5](https://hadoop.apache.org/docs/r2.8.5/)
-Spark: [2.4.5](https://spark.apache.org/docs/2.4.5/)
-Hive: [2.3.6](https://hive.apache.org/)
-Sqoop [1.4.7](https://sqoop.apache.org/docs/1.4.7/SqoopUserGuide.html)
-
-(Similar to EMR 5.30.1)
+  
+(Similar to EMR 5.30.1)  
+Hadoop: [2.8.5](https://hadoop.apache.org/docs/r2.8.5/)  
+Spark: [2.4.5](https://spark.apache.org/docs/2.4.5/)  
+Hive: [2.3.6](https://hive.apache.org/)  
+Sqoop [1.4.7](https://sqoop.apache.org/docs/1.4.7/SqoopUserGuide.html)  
+  
 
 **NOTE: Docker containers are shortlived, data stored on them will be lost as soon you stop the container.** 
 
