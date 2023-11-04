@@ -64,7 +64,13 @@ RUN wget https://archive.apache.org/dist/sqoop/$SQOOP_VERSION/sqoop-$SQOOP_VERSI
     rm $INSTALLATION_DIR/sqoop-$SQOOP_VERSION.bin__hadoop-2.6.0.tar.gz && \
     ln -s $INSTALLATION_DIR/sqoop-$SQOOP_VERSION.bin__hadoop-2.6.0 $SQOOP_HOME
 
+# Install Mysql Jar
+RUN wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-8.1.0.tar.gz -P $INSTALLATION_DIR && \
+    tar -xzf $INSTALLATION_DIR/mysql-connector-j-8.1.0.tar.gz -C $INSTALLATION_DIR/ && \
+    rm $INSTALLATION_DIR/mysql-connector-j-8.1.0.tar.gz && \
+    ln -s $INSTALLATION_DIR/mysql-connector-j-8.1.0/mysql-connector-j-8.1.0.jar ${SQOOP_HOME}/lib/
 # COPY --chown=detools:detools  configs
+
 
 COPY conf/ipython_kernel_config.py /root/.ipython/profile_default/ipython_kernel_config.py
 COPY --chown=detools:detools  conf/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
@@ -76,6 +82,8 @@ COPY --chown=detools:detools  conf/hive-env.sh ${HIVE_HOME}/conf
 COPY --chown=detools:detools  conf/hive-site.xml ${HIVE_HOME}/conf
 COPY --chown=detools:detools  conf/spark-defaults.conf ${SPARK_HOME}/conf
 COPY --chown=detools:detools  start-services.sh $INSTALLATION_DIR/start-services.sh
+RUN mkdir -p ${HOME}/notebooks/
+COPY --chown=detools:detools  sample_notebook.ipynb $INSTALLATION_DIR/sample_notebook.ipynb
 
 RUN chmod 755 $INSTALLATION_DIR/start-services.sh 
 
