@@ -21,6 +21,7 @@ schematool -dbType derby -initSchema
 # Start Spark
 
 $SPARK_HOME/sbin/start-all.sh
-jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser
+cp /home/detools/installations/sample_notebook.ipynb /home/detools/notebooks/sample_notebook.ipynb
+jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --notebook-dir=/home/detools/notebooks
 
 # while true; do sleep 1; done

@@ -17,7 +17,7 @@ Are you a data engineer looking for a hassle-free way to set up a comprehensive 
 # Quick Start:
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 2. Pull **_detools_** docker image: `docker pull giri7627/detools:latest`  
-3. Start container: `docker run --rm -it -p 8080:8080 -p 9000:9000 -p 8088:8088 -p 8042:8042 -p 7077:7077 -p 8888:8888 --hostname localhost giri7627/detools:latest`  
+3. Start container: `docker run --rm -it -p 8080:8080 -p 9000:9000 -p 8088:8088 -p 8042:8042 -p 7077:7077 -p 8888:8888 --hostname localhost -v <Any local dir to save data>:/home/detools/data/ giri7627/detools:latest`  
 4. Open Jupyter Notebook using the link displayed on terminal
 5. Monitor Spark using [Yarn Application Master](http://localhost:8088)
 
